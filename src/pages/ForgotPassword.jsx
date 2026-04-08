@@ -20,7 +20,7 @@ export default function ForgotPassword() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/send-otp",
+        "https://velora-backend-production-3e79.up.railway.app/api/auth/send-otp",
         { email }
       );
 
@@ -42,7 +42,7 @@ export default function ForgotPassword() {
 
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/verify-otp",
+        "https://velora-backend-production-3e79.up.railway.app/api/auth/verify-otp",
         { email, otp, password }
       );
 

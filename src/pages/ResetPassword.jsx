@@ -16,7 +16,7 @@ export default function ResetPassword() {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/auth/reset-password/${token}`,
+        `https://velora-backend-production-3e79.up.railway.app/api/auth/reset-password/${token}`,
         { password }
       );
 

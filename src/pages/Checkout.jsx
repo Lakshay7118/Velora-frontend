@@ -101,7 +101,7 @@ function Checkout() {
         paymentMethod: "COD",
       };
 
-      await axios.post("http://localhost:5000/api/orders", orderData, {
+      await axios.post("https://velora-backend-production-3e79.up.railway.app/api/orders", orderData, {
         headers: { Authorization: `Bearer ${token}` },
       });
 

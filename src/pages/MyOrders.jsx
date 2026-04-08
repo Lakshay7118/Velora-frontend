@@ -11,7 +11,7 @@ function MyOrders() {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/orders/my", {
+        const res = await axios.get("https://velora-backend-production-3e79.up.railway.app/api/orders", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setOrders(res.data);

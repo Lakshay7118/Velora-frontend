@@ -42,7 +42,7 @@ function CartDrawer({ open, onClose }) {
                 src={
                   item.image?.startsWith("http")
                     ? item.image
-                    : `http://localhost:5000/${item.image}`
+                    : `https://velora-backend-production-3e79.up.railway.app/${item.image}`
                 }
                 alt={item.name}
                 className="w-20 h-24 object-cover"

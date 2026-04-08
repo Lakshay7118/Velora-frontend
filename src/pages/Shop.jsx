@@ -17,7 +17,7 @@ function Shop() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get("https://velora-backend-production-3e79.up.railway.app/api/products");
         const data = Array.isArray(res.data) ? res.data : res.data.products;
         setProducts(data);
       } catch (err) {
@@ -95,7 +95,7 @@ function Shop() {
               {finalProducts.map((product) => {
                 const imageUrl = product.image?.startsWith("http")
                   ? product.image
-                  : `http://localhost:5000/${product.image}`;
+                  : `https://velora-backend-production-3e79.up.railway.app/${product.image}`;
 
                 return (
                   <div key={product._id} className="group">

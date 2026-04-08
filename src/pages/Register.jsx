@@ -24,7 +24,7 @@ function Register() {
       setLoading(true);
 
       const res = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://velora-backend-production-3e79.up.railway.app/api/auth/register",
         formData
       );
 

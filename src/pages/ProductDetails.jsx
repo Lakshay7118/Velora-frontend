@@ -29,7 +29,7 @@ function ProductDetails() {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/products/${id}`
+          `https://velora-backend-production-3e79.up.railway.app/api/products/${id}`
         );
         setProduct(res.data);
       } catch (error) {
@@ -61,7 +61,7 @@ function ProductDetails() {
   // ================= IMAGE FIX =================
   const imageUrl = product.image?.startsWith("http")
     ? product.image
-    : `http://localhost:5000/${product.image}`;
+    : `https://velora-backend-production-3e79.up.railway.app/${product.image}`;
 
   return (
     <>

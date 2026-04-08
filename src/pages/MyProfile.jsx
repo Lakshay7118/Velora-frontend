@@ -25,7 +25,7 @@ function MyProfile() {
 
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/auth/profile", {
+        const res = await axios.get("https://velora-backend-production-3e79.up.railway.app/api/auth/profile", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setName(res.data.name);
@@ -47,7 +47,7 @@ function MyProfile() {
 
     try {
       await axios.put(
-        "http://localhost:5000/api/auth/profile",
+        "https://velora-backend-production-3e79.up.railway.app/api/auth/profile",
         { name, password },
         { headers: { Authorization: `Bearer ${token}` } }
       );
